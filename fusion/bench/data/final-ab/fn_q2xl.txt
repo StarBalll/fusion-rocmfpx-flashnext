@@ -1,0 +1,14 @@
+=== Flash-Next Q2_K_XL pp512(补丁后) ===
+  Device 0: AMD Radeon Graphics, gfx1151 (0x1151), VMM: no, Wave Size: 32, VRAM: 126976 MiB
+| model                          |       size |     params | backend    | ngl |  fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | --: | --------------: | -------------------: |
+| qwen4exp A3B Q2_K - Medium     |  73.44 GiB |   176.94 B | ROCm       |  99 |   1 |           pp512 |       311.78 ± 12.65 |
+
+build: 6b999d4 (997)
+=== Flash-Next Q2_K_XL tg128(补丁后) ===
+  Device 0: AMD Radeon Graphics, gfx1151 (0x1151), VMM: no, Wave Size: 32, VRAM: 126976 MiB
+| model                          |       size |     params | backend    | ngl |  fa |            test |                  t/s |
+| ------------------------------ | ---------: | ---------: | ---------- | --: | --: | --------------: | -------------------: |
+| qwen4exp A3B Q2_K - Medium     |  73.44 GiB |   176.94 B | ROCm       |  99 |   1 |           tg128 |         24.83 ± 0.13 |
+
+build: 6b999d4 (997)

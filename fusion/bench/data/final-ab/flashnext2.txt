@@ -1,0 +1,4 @@
+=== Flash-Next tg128 ===
+| deepseek2 30B.A3B Q4_K - Medium |  16.31 GiB |    29.94 B | ROCm       |  99 |   1 |           tg128 |         53.21 ± 0.48 |
+=== Flash-Next pp256 ===
+| deepseek2 30B.A3B Q4_K - Medium |  16.31 GiB |    29.94 B | ROCm       |  99 |   1 |           pp256 |      1159.77 ± 63.00 |

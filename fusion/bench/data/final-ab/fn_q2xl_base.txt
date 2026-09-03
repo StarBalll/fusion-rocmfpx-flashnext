@@ -1,0 +1,8 @@
+=== BASE(6b999d4) Q2_K_XL pp512 ===
+| qwen4exp A3B Q2_K - Medium     |  73.44 GiB |   176.94 B | ROCm       |  99 |   1 |           pp512 |       277.25 ± 10.00 |
+
+build: 6b999d4 (997)
+=== BASE(6b999d4) Q2_K_XL tg128 ===
+| qwen4exp A3B Q2_K - Medium     |  73.44 GiB |   176.94 B | ROCm       |  99 |   1 |           tg128 |         23.90 ± 0.56 |
+
+build: 6b999d4 (997)

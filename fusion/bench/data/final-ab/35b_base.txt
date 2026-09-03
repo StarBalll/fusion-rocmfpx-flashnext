@@ -1,0 +1,4 @@
+=== BASE(6b999d4) 35B Q6_K pp512 ===
+| qwen35moe 35B.A3B Q6_K         |  27.25 GiB |    35.51 B | ROCm       |  99 |   1 |           pp512 |       795.65 ± 11.58 |
+=== BASE(6b999d4) 35B Q6_K tg128 ===
+| qwen35moe 35B.A3B Q6_K         |  27.25 GiB |    35.51 B | ROCm       |  99 |   1 |           tg128 |         52.50 ± 0.40 |

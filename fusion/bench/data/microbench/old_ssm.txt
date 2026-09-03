@@ -1,0 +1,2 @@
+  SSM_SCAN(type=f32,d_state=128,head_dim=64,n_head=48,n_group=1,n_seq_tokens=512,n_seqs=1,xbc_overlap=0):               2102 runs -  2095.55 us/run -    15968 kB/run - [1;34m   7.27 GB/s[0m
+  SSM_SCAN(type=f32,d_state=128,head_dim=64,n_head=48,n_group=1,n_seq_tokens=1,n_seqs=1,xbc_overlap=0):                98304 runs -    10.48 us/run -     3097 kB/run - [1;34m 281.77 GB/s[0m

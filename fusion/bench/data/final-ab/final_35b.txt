@@ -1,0 +1,4 @@
+=== FINAL 35B Q6_K pp512(安装版 r5) ===
+| qwen35moe 35B.A3B Q6_K         |  27.25 GiB |    35.51 B | ROCm       |  99 |   1 |           pp512 |      1091.10 ± 17.35 |
+=== FINAL 35B Q6_K tg128(安装版 r5) ===
+| qwen35moe 35B.A3B Q6_K         |  27.25 GiB |    35.51 B | ROCm       |  99 |   1 |           tg128 |         52.65 ± 0.35 |

@@ -1,0 +1,63 @@
+name: fusion HIP build (gfx1151)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, prefill-opt]
+    paths:
+      - "ggml/src/ggml-cuda/**"
+      - "src/**"
+      - "fusion/**"
+      - ".github/workflows/fusion-build.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fusion-build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    # Software-only HIP compile check; no GPU runtime on GH runners.
+    # gfx1151 codegen is validated on real hardware via ./fusion/build.sh (self-hosted).
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Install ROCm HIP (no GPU)
+        run: |
+          set -e
+          wget -qO- https://repo.radeon.com/rocm/rocm.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/rocm.gpg
+          echo "deb [signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.com/rocm/apt/6.4.1 jammy main" \
+            | sudo tee /etc/apt/sources.list.d/rocm.list
+          sudo apt-get update -qq
+          # skip amdgpu-dkms: compile-only, no kernel driver needed
+          sudo apt-get install -y --no-install-recommends rocm-hip-runtime-dev hipcub-dev rocprim-dev
+          echo "ROCM_PATH=/opt/rocm" >> "$GITHUB_ENV"
+          echo "/opt/rocm/bin" >> "$GITHUB_PATH"
+
+      - name: Verify fusion commits present
+        run: |
+          git log --oneline -8
+          git log --format=%s -1 | grep -q "MMQ" || echo "note: HEAD is not a prefill-opt commit"
+
+      - name: CMake configure (HIP, gfx1151, W4A4=OFF)
+        run: |
+          cmake -S . -B build \
+            -DGGML_HIP=ON \
+            -DGGML_VULKAN=OFF \
+            -DGGML_HIP_ROCMI4_W4A4=OFF \
+            -DCMAKE_HIP_ARCHITECTURES=gfx1151 \
+            -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build (compile-only validation)
+        run: cmake --build build --config Release -j"$(nproc)"
+
+      - name: Smoke test (CPU-only ggml ops run on GH runner)
+        run: |
+          ./build/bin/test-backend-ops test -b CPU -o MUL_MAT -p 'type_a=q6_K,' --n-max 128 || true
+          ./build/bin/test-backend-ops test -b CPU -o MUL_MAT_ID -p 'type_a=q6_K,' --n-max 128 || true

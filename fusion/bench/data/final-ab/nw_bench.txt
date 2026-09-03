@@ -1,0 +1,4 @@
+=== NEW pp512 no-warmup r4 ===
+| qwen35moe 35B.A3B Q6_K         |  27.25 GiB |    35.51 B | ROCm       |  99 |   1 |           pp512 |       800.82 ± 32.31 |
+=== OLD pp512 no-warmup r4 ===
+| qwen35moe 35B.A3B Q6_K         |  27.25 GiB |    35.51 B | ROCm       |  99 |   1 |           pp512 |      1055.75 ± 34.41 |

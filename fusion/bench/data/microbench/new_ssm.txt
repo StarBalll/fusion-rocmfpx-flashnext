@@ -1,0 +1,6 @@
+  SSM_SCAN(type=f32,d_state=128,head_dim=80,n_head=128,n_group=1,n_seq_tokens=256,n_seqs=1,xbc_overlap=0,K=1,weak_decay=0):                     1079 runs -  3455.80 us/run -    31104 kB/run - [1;34m   8.58 GB/s[0m
+  SSM_SCAN(type=f32,d_state=128,head_dim=64,n_head=80,n_group=8,n_seq_tokens=300,n_seqs=2,xbc_overlap=0,K=1,weak_decay=0):               856 runs -  2367.04 us/run -    39227 kB/run - [1;34m  15.80 GB/s[0m
+  SSM_SCAN(type=f32,d_state=128,head_dim=64,n_head=48,n_group=1,n_seq_tokens=512,n_seqs=1,xbc_overlap=0,K=1,weak_decay=0):              2102 runs -   809.29 us/run -    15968 kB/run - [1;34m  18.82 GB/s[0m
+  SSM_SCAN(type=f32,d_state=128,head_dim=64,n_head=48,n_group=1,n_seq_tokens=1,n_seqs=1,xbc_overlap=0,K=1,weak_decay=0):               90112 runs -    11.48 us/run -     3097 kB/run - [1;34m 257.31 GB/s[0m
+  SSM_SCAN(type=f32,d_state=128,head_dim=80,n_head=128,n_group=1,n_seq_tokens=512,n_seqs=1,xbc_overlap=0,K=1,weak_decay=0):                      646 runs -  4177.28 us/run -    51968 kB/run - [1;34m  11.86 GB/s[0m
+  SSM_SCAN(type=f32,d_state=128,head_dim=80,n_head=128,n_group=1,n_seq_tokens=1,n_seqs=1,xbc_overlap=0,K=1,weak_decay=0):              35761 runs -    29.33 us/run -    10322 kB/run - [1;34m 335.58 GB/s[0m

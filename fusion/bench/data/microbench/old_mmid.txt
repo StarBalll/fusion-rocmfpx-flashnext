@@ -1,0 +1,12 @@
+  MUL_MAT_ID(type_a=q6_K,type_b=f32,n_mats=128,n_used=8,b=0,m=768,n=1,k=2048):                 35766 runs -    30.17 us/run -  25.17 MFLOP/run - [1;34m834.07 GFLOPS[0m
+  MUL_MAT_ID(type_a=q6_K,type_b=f32,n_mats=128,n_used=8,b=0,m=768,n=4,k=2048):                  8946 runs -   125.18 us/run - 100.66 MFLOP/run - [1;34m804.14 GFLOPS[0m
+  MUL_MAT_ID(type_a=q6_K,type_b=f32,n_mats=128,n_used=8,b=0,m=768,n=8,k=2048):                  2982 runs -   390.31 us/run - 201.33 MFLOP/run - [1;34m515.81 GFLOPS[0m
+  MUL_MAT_ID(type_a=q6_K,type_b=f32,n_mats=128,n_used=8,b=0,m=768,n=32,k=2048):                 1375 runs -   770.08 us/run - 805.31 MFLOP/run - [1;34m  1.05 TFLOPS[0m
+  MUL_MAT_ID(type_a=q6_K,type_b=f32,n_mats=128,n_used=8,b=0,m=768,n=64,k=2048):                 1134 runs -   916.29 us/run -   1.61 GFLOP/run - [1;34m  1.76 TFLOPS[0m
+  MUL_MAT_ID(type_a=q6_K,type_b=f32,n_mats=128,n_used=8,b=0,m=768,n=128,k=2048):                1056 runs -   973.56 us/run -   3.22 GFLOP/run - [1;34m  3.31 TFLOPS[0m
+  MUL_MAT_ID(type_a=q6_K,type_b=f32,n_mats=128,n_used=8,b=0,m=768,n=256,k=2048):                 736 runs -  1361.20 us/run -   6.44 GFLOP/run - [1;34m  4.73 TFLOPS[0m
+  MUL_MAT_ID(type_a=q6_K,type_b=f32,n_mats=128,n_used=8,b=0,m=768,n=512,k=2048):                 488 runs -  2080.90 us/run -  12.88 GFLOP/run - [1;34m  6.19 TFLOPS[0m
+  MUL_MAT_ID(type_a=q6_K,type_b=f32,n_mats=32,n_used=4,b=0,m=1792,n=1,k=2048):                 30654 runs -    35.43 us/run -  29.36 MFLOP/run - [1;34m828.76 GFLOPS[0m
+  MUL_MAT_ID(type_a=q6_K,type_b=f32,n_mats=32,n_used=4,b=0,m=1792,n=4,k=2048):                  5964 runs -   175.26 us/run - 117.44 MFLOP/run - [1;34m670.09 GFLOPS[0m
+  MUL_MAT_ID(type_a=q6_K,type_b=f32,n_mats=32,n_used=4,b=0,m=1792,n=8,k=2048):                  2556 runs -   406.18 us/run - 234.88 MFLOP/run - [1;34m578.27 GFLOPS[0m
+  MUL_MAT_ID(type_a=q6_K,type_b=f32,n_mats=32,n_used=4,b=0,m=1792,n=32,k=2048):                 1926 runs -   541.95 us/run - 939.52 MFLOP/run - [1;34m  1.73 TFLOPS[0m
