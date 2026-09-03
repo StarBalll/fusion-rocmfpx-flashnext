@@ -2,6 +2,12 @@
 
 # ROCmFPX llama.cpp
 
+> **This checkout = fusion-rocmfpx-flashnext.** ROCmFPX main + the 5 drluoto
+> qwen4exp NextN/MTP (Flash-Next) cherry-picks + the `prefill-opt` MMQ commits
+> (routed-MoE ncols_picker, 35B Q6_K pp512 795 -> 1091 t/s on gfx1151).
+> Build / benchmarks / recorded data: [fusion/README.md](fusion/README.md).
+> Current branch: `prefill-opt`.
+
 This public downstream tracks current upstream `llama.cpp` while
 developing the ROCmFPX weight-format family for AMD GPUs. Normal Vulkan support
 remains enabled; HIP and CPU are also supported build targets. Existing NVFP4
