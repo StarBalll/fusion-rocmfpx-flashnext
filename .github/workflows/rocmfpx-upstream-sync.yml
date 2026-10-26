@@ -2,8 +2,6 @@ name: ROCmFPX upstream sync
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "23 9 * * 1"
 
 permissions:
   contents: write
