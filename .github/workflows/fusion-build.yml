@@ -2,14 +2,6 @@ name: fusion HIP build (gfx1151)
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main, prefill-opt]
-    paths:
-      - "ggml/src/ggml-cuda/**"
-      - "src/**"
-      - "fusion/**"
-      - ".github/workflows/fusion-build.yml"
-
 permissions:
   contents: read
 

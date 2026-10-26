@@ -2,13 +2,6 @@ name: ROCmFPX reference check
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-      - experimental-rocmfpx-branch
-  pull_request:
-    types: [opened, synchronize, reopened, ready_for_review]
-
 permissions:
   contents: read
 
